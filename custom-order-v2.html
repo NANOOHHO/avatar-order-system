@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VRChat Avatar Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="custom-order_style.css">
+  <script src="custom-order-v2.js" defer></script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="logo" href="index.html" title="Back to Main Page">
+      <span class="logo-badge" aria-hidden="true"></span>
+      <span class="logo-text">NANOOHHO</span>
+    </a>
+  </header>
+
+  <div class="glow-decor top-left" aria-hidden="true"></div>
+  <div class="glow-decor bottom-right" aria-hidden="true"></div>
+
+  <div class="container">
+    <h1><a href="custom-order-v2.html" class="title-link">Vrchat Avatar Order</a></h1>
+    <div class="progress" id="progress">Step 1 / 6</div>
+    <div id="price" class="price-box">Estimated Price: 0 THB</div>
+    <div style="text-align:center;margin-top:8px;">
+      <button id="multiToggle" type="button" onclick="toggleMulti()">Multi-select: Off</button>
+    </div>
+
+    <!-- STEP 1: Select Base Model -->
+    <div class="step active" id="step-1">
+      <h2>Select Base Model</h2>
+      <div class="grid"></div>
+    </div>
+
+    <!-- STEP 2: Select Hair Style -->
+    <div class="step" id="step-2">
+      <h2>Select Hair Style</h2>
+      <div class="grid"></div>
+      <div class="nav">
+        <button onclick="prevStep()">Back</button>
+        <button onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Choose Hair -->
+    <div class="step" id="step-3">
+      <h2>Choose any hair you want</h2>
+      <div id="hairSelectionArea" style="margin-top:14px;display:none;">
+        <h3>Available hairs</h3>
+      </div>
+      <div class="nav">
+        <button onclick="prevStep()">Back</button>
+        <button onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: Select Outfit Style -->
+    <div class="step" id="step-4">
+      <h2>Select Outfit Style</h2>
+      <div class="grid"></div>
+      <div class="nav">
+        <button onclick="prevStep()">Back</button>
+        <button onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 5: Choose Outfit -->
+    <div class="step" id="step-5">
+      <h2>Choose any outfit you want</h2>
+      <div id="outfitSelectionArea" style="margin-top:14px;display:none;">
+        <h3>Available outfits</h3>
+      </div>
+      <div class="nav">
+        <button onclick="prevStep()">Back</button>
+        <button onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 6: Finish -->
+    <div class="step" id="step-6">
+      <h2>Finish</h2>
+      <div class="summary" id="summary"></div>
+      <div class="nav">
+        <button onclick="prevStep()">Back</button>
+        <button onclick="downloadOrder()">Done & Download</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

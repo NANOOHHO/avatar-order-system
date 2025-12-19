@@ -1,0 +1,333 @@
+/* custom-order_style.css — VRChat Avatar Custom Order Style */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #0f2027, #000);
+    color: #e8f6ff;
+    overflow-x: hidden;
+}
+
+.title-link{
+    text-decoration: none;   /* เอาเส้นใต้ออก */
+    color: inherit;          /* ใช้สีเดียวกับ h1 */
+}
+
+.title-link:visited{
+    color: inherit;          /* กันไม่ให้เป็นสีม่วง */
+}
+
+.title-link:hover{
+    text-shadow: 0 0 18px rgba(124,58,237,0.8);
+}
+
+h1,
+h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(0, 200, 255, .8);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.step {
+    display: none;
+    animation: fadeIn .6s ease;
+}
+
+.step.active {
+    display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: rgba(10, 30, 40, .6);
+    border: 1px solid rgba(0, 200, 255, .4);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    box-shadow: 0 0 15px rgba(0, 200, 255, .15);
+    will-change: transform, box-shadow;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 200, 255, .6);
+}
+
+.card.selected {
+    border: 2px solid rgba(0, 200, 255, 1);
+    box-shadow: 0 10px 40px rgba(0, 200, 255, .45);
+    transform: translateY(-8px) scale(1.03);
+    background: linear-gradient(180deg, rgba(0,200,255,0.04), rgba(10,30,40,0.7));
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.progress {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: .8;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    padding: 10px 26px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 200, 255, .6);
+    background: transparent;
+    color: #bff3ff;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .2s ease;
+}
+
+button:hover {
+    background: rgba(0, 200, 255, .15);
+    box-shadow: 0 0 15px rgba(0, 200, 255, .6);
+}
+
+#multiToggle {
+    margin-top: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+#multiToggle.on {
+    background: linear-gradient(90deg, rgba(0,200,255,0.18), rgba(0,150,200,0.12));
+    border-color: rgba(0,200,255,1);
+    color: #001418;
+}
+
+.summary {
+    background: rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 200, 255, .3);
+    margin-top: 30px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.price-box {
+    margin-top: 10px;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #333;
+    font-weight: bold;
+}
+
+/* SAO-style background + corner glows */
+:root{
+    --bg-top:#050417;
+    --bg-bottom:#071028;
+    --accent1:#7c3aed;
+    --accent2:#60a5fa;
+}
+
+body{
+    background:
+        radial-gradient(ellipse at 20% 10%, rgba(124,58,237,0.10), transparent 8%),
+        radial-gradient(ellipse at 85% 70%, rgba(96,165,250,0.06), transparent 12%),
+        linear-gradient(180deg,var(--bg-top),var(--bg-bottom));
+    color: #e6eef8;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        linear-gradient(rgba(96,165,250,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,58,237,0.02) 1px, transparent 1px);
+    background-size: 60px 60px, 60px 60px;
+    mix-blend-mode: overlay;
+    animation: gridShift 20s linear infinite;
+    /* lower opacity to avoid heavy repaints / flashing on hover */
+    opacity: 0.12;
+}
+
+@keyframes gridShift{
+    from{ background-position: 0 0, 0 0; }
+    to  { background-position: 120px 120px, -120px -120px; }
+}
+
+body::after{
+    content:"";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%);
+}
+
+/* container glass */
+.container{
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 26px;
+    backdrop-filter: blur(8px) saturate(1.02);
+    box-shadow: 0 12px 40px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+h1, h2{
+    color: #f0f8ff;
+    text-shadow: 0 6px 30px rgba(124,58,237,0.10), 0 2px 8px rgba(96,165,250,0.06);
+}
+
+.progress, .price-box{
+    display:inline-block;
+    background: linear-gradient(90deg, rgba(96,165,250,0.04), rgba(124,58,237,0.04));
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.03);
+    color: #dff2ff;
+    z-index:1;
+}
+
+.card{
+    transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s, outline .18s;
+    background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.008));
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.03);
+    padding:10px;
+}
+
+.card:hover, .card.selected{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 48px rgba(96,165,250,0.08), 0 8px 22px rgba(124,58,237,0.05);
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:6px;
+    margin-bottom:8px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+}
+
+.nav button{
+    background: linear-gradient(90deg,var(--accent2),var(--accent1));
+    color:#061021;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow: 0 10px 25px rgba(96,165,250,0.08);
+    transition: transform .15s;
+}
+.nav button:hover{ transform: translateY(-3px); }
+
+.glow-decor{
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+}
+.glow-decor.top-left{
+    left:-120px; top:-80px;
+    width:420px; height:420px;
+    background: radial-gradient(circle at 30% 30%, rgba(124,58,237,0.12), transparent 30%);
+}
+.glow-decor.bottom-right{
+    right:-120px; bottom:-80px;
+    width:420px; height:420px;
+    background: radial-gradient(circle at 70% 70%, rgba(96,165,250,0.09), transparent 30%);
+}
+
+@media (max-width:800px){
+    body::before{ opacity:0.7; background-size: 40px 40px, 40px 40px; }
+    .container{ padding:18px; border-radius:10px; }
+}
+
+/* end SAO additions */
+
+/* Logo / topbar styling */
+.topbar{
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+}
+.topbar .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 6px 22px rgba(2,6,23,0.6);
+    backdrop-filter: blur(6px) saturate(1.05);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.topbar .logo:hover{ transform: translateY(-4px); box-shadow: 0 18px 50px rgba(2,6,23,0.75); }
+.logo-badge{
+    width:44px; height:44px; border-radius:10px;
+    background: conic-gradient(from 220deg at 50% 50%, var(--accent1), var(--accent2));
+    box-shadow: inset 0 -6px 12px rgba(0,0,0,0.25), 0 6px 18px rgba(96,165,250,0.08);
+    display:inline-block;
+}
+.logo-text{
+    font-weight:700;
+    font-size:15px;
+    color: #f8fbff;
+    letter-spacing:1.4px;
+    text-shadow: 0 6px 20px rgba(124,58,237,0.08), 0 2px 8px rgba(96,165,250,0.06);
+}
+
+@media (max-width:760px){
+    .topbar{ left:12px; top:12px; }
+    .logo-text{ display:none; }
+    .logo-badge{ width:38px; height:38px; }
+}

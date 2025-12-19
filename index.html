@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NANOOHHO VRChat Avatar Showcase</title>
+  <link rel="stylesheet" href="style2.css">
+  <!-- Optional: model-viewer for 3D preview (ถ้าต้องการ 3D glTF/GLB) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div id="stage">
+    <canvas id="bgCanvas"></canvas>
+
+    <header class="topbar">
+      <a href="index.html" class="logo">𝐍𝐀𝐍𝐎𝐎𝐇𝐇𝐎</a>
+      <nav>
+        <a href="#showcase">Showcase</a>
+        <a href="#features">Features</a>
+        <a href="#download">Order</a>
+      </nav>
+      <button id="cta" class="neon" onclick="window.open('https://vrchat.com/home/user/usr_d28d39ca-615a-491c-afcb-bfe298da47ba', '_blank')">Add me</button>
+    </header>
+
+    <main class="hero-wrap">
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Enter the <span class="glow">Virtual Stage</span></h1>
+          <p class="sub">Avatar VRChat high-detail for PC ready for you.</p>
+
+          <div class="meta">
+            <div><strong>Platform</strong><span>PC</span></div>
+            <div><strong>Model</strong><span>Humanoid</span></div>
+            <div><strong>Shaders</strong><span>liltoon, poiyomi</span></div>
+          </div>
+
+          <div class="actions">
+            <button class="btn neon" id="openGallery">ดูรูปอวาต้า</button>
+            <a class="btn ghost" href="#download">ทดลอง/สั่งทำ</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- หากมี 3D model ใช้ <model-viewer> (ไฟล์ .glb) -->
+          <!-- <model-viewer src="../img/vrchat/avatar.glb" alt="Avatar 3D" auto-rotate camera-controls></model-viewer> -->
+
+          <!-- เป็นภาพสลับ (carousel แบบง่าย) -->
+          <div class="preview" id="previewArea">
+            <img src="../img/vrchat/VRChat_2025-08-11_01-06-39.544_2560x1440.png" alt="Avatar 1" data-src="../img/vrchat/VRChat_2025-08-11_01-06-39.544_2560x1440.png">
+          </div>
+
+          <div class="thumbs">
+            <img src="assets/vrchat/VRChat_2025-08-11_01-06-39.544_2560x1440.png" alt="t0" data-large="assets/vrchat/VRChat_2025-08-11_01-06-39.544_2560x1440.png">
+            <img src="assets/vrchat/VRChat_2025-08-18_04-41-37.180_7680x4320.png" alt="t1" data-large="assets/vrchat/VRChat_2025-08-18_04-41-37.180_7680x4320.png">
+            <img src="assets/vrchat/VRChat_2025-09-29_23-03-22.412_2560x1440.png" alt="t2" data-large="assets/vrchat/VRChat_2025-09-29_23-03-22.412_2560x1440.png">
+            <img src="assets/vrchat/VRChat_2025-11-28_00-04-27.894_7680x4320 fixed.png" alt="t3" data-large="assets/vrchat/VRChat_2025-11-28_00-04-27.894_7680x4320 fixed.png">
+            <img src="assets/vrchat/VRChat_2025-08-08_02-01-08.080_1920x1080.png" alt="t4" data-large="assets/vrchat/VRChat_2025-08-08_02-01-08.080_1920x1080.png">
+            <img src="assets/vrchat/VRChat_2025-08-08_02-02-07.429_1920x1080.png" alt="t5" data-large="assets/vrchat/VRChat_2025-08-08_02-02-07.429_1920x1080.png">
+            <img src="assets/vrchat/VRChat_2025-09-29_23-08-30.438_2560x1440.png" alt="t6" data-large="assets/vrchat/VRChat_2025-09-29_23-08-30.438_2560x1440.png">
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <h2>Features</h2>
+        <div class="feature-grid">
+          <div class="fcard"><h3>Quality Level (Less / More)</h3><p>ปรับระดับคุณภาพของชุดหรือเครื่องประดับให้เหมาะสมกับขนาดและประสิทธิภาพของอวาต้า</p></div>
+          <div class="fcard"><h3>Custom Shaders</h3><p>เอฟเฟกต์แสงพิเศษสำหรับอวาต้า เช่น Bloom และ Rim Lightเพิ่มมิติและความโดดเด่นให้กับโมเดล</p></div>
+          <div class="fcard"><h3>Props & Equipment</h3><p>อุปกรณ์เสริมสำหรับอวาต้า เช่น ดาบ ปืน และของถืออื่นๆมีให้เลือกทั้งแบบมาตรฐาน และแบบเอฟเฟกต์พิเศษ</p></div>
+        </div>
+      </section>
+
+      <section id="download" class="download">
+        <h2>Get the Avatar</h2>
+        <p class="sub">ลิงก์สั่งซื้อ / ทดลองใช้งาน</p>
+        <div class="download-cards">
+          <div class="dcard">
+            <h4>Give it a look</h4>
+            <p>คลิกเพื่อลองใช้งานระบบสั่งซื้อก่อนได้เลย ไม่ต้องกังวล</p>
+            <a class="btn neon" href="custom-order-v2.html">Click</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      © <span id="year"></span> NANOOHHO • VRChat Avatar Showcase
+    </footer>
+  </div>
+
+  <!-- GALLERY MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal" class="close">✕</button>
+      <div class="modal-gallery" id="modalGallery"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
