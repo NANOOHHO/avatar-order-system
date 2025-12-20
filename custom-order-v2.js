@@ -14,8 +14,8 @@ const avatarData = {
   hairs: {
     "Shinano Base": {
       "Long": [
-        { id: "Shinano - Aurora Curl", label: "Aurora Curl", img: "assets/hairs/aurora curl.png", price: 50 },
-        { id: "Shinano - Wingflare", label: "Wingflare", img: "assets/hairs/sio wingflare.png", price: 40 },
+        { id: "Shinano - Aurora Curl", label: "Aurora Curl", img: "assets/hairs/Aurora curl.png", price: 50 },
+        { id: "Shinano - Wingflare", label: "Wingflare", img: "assets/hairs/Wingflare.png", price: 40 },
       ],
       "Short": [
         { id: "Shinano - Enigma Fringe Braid", label: "Enigma Fringe Braid", img: "assets/hairs/Enigma fringe braid.png", price: 50 },
@@ -25,9 +25,9 @@ const avatarData = {
     },
     "Manuka Base": {
       "Long": [
-        { id: "Manuka - P♡P.Hair 03", label: "P♡P.Hair 03", img: "assets/hairs/manuka P♡P.Hair 03.png", price: 45 },
+        { id: "Manuka - P♡P.Hair 03", label: "P♡P.Hair 03", img: "assets/hairs/Manuka P♡P.Hair 03.png", price: 45 },
         { id: "Manuka - Jellyennui", label: "Jellyennui", img: "assets/hairs/Jellyennui.png", price: 50 },
-        { id: "Manuka - Aurora Curl", label: "Aurora Curl", img: "assets/hairs/aurora curl.png", price: 50 },
+        { id: "Manuka - Aurora Curl", label: "Aurora Curl", img: "assets/hairs/Aurora curl.png", price: 50 },
       ],
       "Short": [
         { id: "Manuka - Stellar Bun Hair", label: "Stellar Bun Hair", img: "assets/hairs/Stellar bun hair.png", price: 50 },
@@ -36,13 +36,13 @@ const avatarData = {
     },
     "Sio Base": {
       "Long": [
-        { id: "Sio - P♡P.Hair 03", label: "P♡P.Hair 03", img: "assets/hairs/sio P♡P.Hair 03.png", price: 45 },
-        { id: "Sio - Wingflare", label: "Wingflare", img: "assets/hairs/sio wingflare.png", price: 40 },
-        { id: "Sio - Aurora Curl", label: "Aurora Curl", img: "assets/hairs/aurora curl.png", price: 50 },
+        { id: "Sio - P♡P.Hair 03", label: "P♡P.Hair 03", img: "assets/hairs/P♡P.Hair 03.png", price: 45 },
+        { id: "Sio - Wingflare", label: "Wingflare", img: "assets/hairs/Wingflare.png", price: 40 },
+        { id: "Sio - Aurora Curl", label: "Aurora Curl", img: "assets/hairs/Aurora curl.png", price: 50 },
       ],
       "Short": [
-        { id: "Sio - Bonnie", label: "Bonnie", img: "assets/hairs/sio bonnie short hair.png", price: 35 },
-        { id: "Sio - Hush Cut", label: "Hush Cut", img: "assets/hairs/mamoming hair_002 hush cut.PNG", price: 40 },
+        { id: "Sio - Bonnie", label: "Bonnie", img: "assets/hairs/Bonnie short hair.png", price: 35 },
+        { id: "Sio - Hush Cut", label: "Hush Cut", img: "assets/hairs/Mamoming hair_002 hush cut.PNG", price: 40 },
         { id: "Sio - Enigma Fringe Braid", label: "Enigma Fringe Braid", img: "assets/hairs/Enigma fringe braid.png", price: 50 },
         { id: "Sio - Stellar Bun Hair", label: "Stellar Bun Hair", img: "assets/hairs/Stellar bun hair.png", price: 50 },
         { id: "Sio - One Side Up Bob", label: "One Side Up Bob", img: "assets/hairs/One Side Up Bob.png", price: 40 }
@@ -51,7 +51,6 @@ const avatarData = {
   },
   outfitStyles: [
     { id: "Casual", label: "Casual" },
-    { id: "Cyber", label: "Cyber" },
     { id: "Fantasy", label: "Fantasy" },
     { id: "Costume", label: "Costume" }
   ],
@@ -59,7 +58,7 @@ const avatarData = {
   outfits: {
     "Shinano Base": {
       "Casual": [
-        { id: "Shinano - Mallownyan", label: "Mallownyan", img: "assets/clothes/mallownyan.png", price: 100 },
+        { id: "Shinano - Mallownyan", label: "Mallownyan", img: "assets/clothes/Mallownyan.png", price: 100 },
         //{ id: "Shinano - Casual B", label: "Casual B", img: "assets/clothes/shinano/casual2.png", price: 0 }
       ],
       "Fantasy": [
@@ -73,34 +72,34 @@ const avatarData = {
     },
     "Manuka Base": {
       "Casual": [
-        { id: "Manuka - Balloon", label: "Balloon", img: "assets/clothes/balloon.png", price: 100 },
-        { id: "Manuka - Mallownyan", label: "Mallownyan", img: "assets/clothes/mallownyan.png", price: 100 }
+        { id: "Manuka - Balloon", label: "Balloon", img: "assets/clothes/Balloon.png", price: 100 },
+        { id: "Manuka - Mallownyan", label: "Mallownyan", img: "assets/clothes/Mallownyan.png", price: 100 }
       ],
       "Fantasy": [
         { id: "Manuka - Ebon Feast", label: "Ebon Feast", img: "assets/clothes/Ebon Feast.png", price: 100 },
         { id: "Manuka - Melty", label: "Melty", img: "assets/clothes/Melty.png", price: 75 }
       ],
       "Costume": [
-        { id: "Manuka - Reverse Side Suit", label: "Reverse Side Suit", img: "assets/clothes/reverse side suit.png", price: 100 },
+        { id: "Manuka - Reverse Side Suit", label: "Reverse Side Suit", img: "assets/clothes/Reverse side suit.png", price: 100 },
         { id: "Manuka - Mizakura ", label: "Mizakura ", img: "assets/clothes/Mizakura.png", price: 100 },
-        { id: "Manuka - Overay bikini 2", label: "overay bikini 2", img: "assets/clothes/overay bikini 2.png", price: 100 },
+        { id: "Manuka - Overay bikini 2", label: "overay bikini 2", img: "assets/clothes/Overay bikini 2.png", price: 100 },
         { id: "Manuka - Selfish Devil", label: "Selfish Devil", img: "assets/clothes/Selfish Devil.png", price: 100 },
         { id: "Manuka - Neko Jersey Maid", label: "Neko Jersey Maid", img: "assets/clothes/Neko Jersey Maid.png", price: 100 }
       ]
     },
     "Sio Base": {
       "Casual": [
-        { id: "Sio - Balloon", label: "Balloon", img: "assets/clothes/balloon.png", price: 100 },
-        { id: "Sio - Mallownyan", label: "Mallownyan", img: "assets/clothes/mallownyan.png", price: 100 }
+        { id: "Sio - Balloon", label: "Balloon", img: "assets/clothes/Balloon.png", price: 100 },
+        { id: "Sio - Mallownyan", label: "Mallownyan", img: "assets/clothes/Mallownyan.png", price: 100 }
       ],
       "Fantasy": [
         { id: "Sio - Ebon Feast", label: "Ebon Feast", img: "assets/clothes/Ebon Feast.png", price: 100 },
         { id: "Sio - Melty", label: "Melty", img: "assets/clothes/Melty.png", price: 100 }
       ],
       "Costume": [
-        { id: "Sio - Reverse Side Suit", label: "Reverse Side Suit", img: "assets/clothes/reverse side suit.png", price: 100 },
+        { id: "Sio - Reverse Side Suit", label: "Reverse Side Suit", img: "assets/clothes/Reverse side suit.png", price: 100 },
         { id: "Sio - Mizakura ", label: "Mizakura ", img: "assets/clothes/Mizakura.png", price: 100 },
-        { id: "Sio - Overay bikini 2", label: "overay bikini 2", img: "assets/clothes/overay bikini 2.png", price: 100 },
+        { id: "Sio - Overay bikini 2", label: "overay bikini 2", img: "assets/clothes/Overay bikini 2.png", price: 100 },
         { id: "Sio - Selfish Devil", label: "Selfish Devil", img: "assets/clothes/Selfish Devil.png", price: 100 },
         { id: "Sio - Neko Jersey Maid", label: "Neko Jersey Maid", img: "assets/clothes/Neko Jersey Maid.png", price: 100 }
       ]
