@@ -25,7 +25,7 @@ const avatarData = {
     },
     "Manuka Base": {
       "Long": [
-        { id: "Manuka - P♡P.Hair 03", label: "P♡P.Hair 03", img: "assets/hairs/Manuka P♡P.Hair 03.png", price: 45 },
+        { id: "Manuka - P♡P.Hair 03", label: "P♡P.Hair 03", img: "assets/hairs/P♡P.Hair 03.png", price: 45 },
         { id: "Manuka - Jellyennui", label: "Jellyennui", img: "assets/hairs/Jellyennui.png", price: 50 },
         { id: "Manuka - Aurora Curl", label: "Aurora Curl", img: "assets/hairs/Aurora curl.png", price: 50 },
       ],
@@ -437,3 +437,4 @@ function downloadOrder() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', initializeUI);
+
